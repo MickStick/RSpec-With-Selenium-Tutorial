@@ -1,11 +1,14 @@
 require "selenium-webdriver"
 require "rspec"
+require "dotenv"
 require_relative '../../page_objects/page'
+
+Dotenv.load
 
 describe "Navigation Test" do
 
   before(:each) do
-    Selenium::WebDriver::Chrome.driver_path="/Users/shawkhail/Projects/RSpec-With-Selenium-Tutorial/chromedriver"
+    Selenium::WebDriver::Chrome.driver_path=ENV['ChromeDriver']
     @driver = Selenium::WebDriver.for :chrome
     @base_url = "http://www.mrshaw.ml/"
     @page = Page.new(@driver)

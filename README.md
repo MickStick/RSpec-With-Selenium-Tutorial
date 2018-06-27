@@ -24,7 +24,8 @@ Install All Gems
 > $ bundle install
 
 <a href="https://chromedriver.storage.googleapis.com/index.html?path=2.40/"> Download </a> Google Chrome's ChromeDriver  
-Unzip and move the driver to the drivers folder in the project root folder
+Create a "drivers" folder inside of the root project folder  
+Unzip and move the chromedriver to the drivers folder
 
 **.env**  
 ChromeDriver="path/to/chromedriver"
